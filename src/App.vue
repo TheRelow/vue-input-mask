@@ -4,9 +4,23 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <br><br>
+    <input v-input-mask v-model="hex">
+    <br>
+    {{ hex }}
+    <br><br>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  data:()=>({
+    hex: 10,
+    something: 'else'
+  })
+}
+</script>
 
 <style lang="scss">
 #app {
